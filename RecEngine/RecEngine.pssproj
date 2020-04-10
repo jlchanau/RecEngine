@@ -27,6 +27,7 @@
   </PropertyGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="RecEngine.exe" />
     <Content Include="Resources.resx" />
   </ItemGroup>
   <ItemGroup>

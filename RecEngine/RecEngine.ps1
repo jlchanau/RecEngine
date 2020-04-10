@@ -66,6 +66,9 @@ Function Select-FileDialog
     Out-Null     
 
     $objForm = New-Object System.Windows.Forms.OpenFileDialog -Property @{Filter = 'SQL files (*.sql)|*.sql'}
+    $objForm.ShowHelp = $True
+    $objForm.OverwritePrompt = $True
+    $objForm.CreatePrompt = $True
     $objForm.ShowDialog() | out-null
     Return $objForm.FileName
 }
@@ -76,14 +79,19 @@ Function Open-FileDialog
     Out-Null     
 
     $objForm = New-Object System.Windows.Forms.OpenFileDialog -Property @{Filter = 'JSON files (*.json)|*.json'}
+    $objForm.ShowHelp = $True
+    $objForm.OverwritePrompt = $True
+    $objForm.CreatePrompt = $True
     $objForm.ShowDialog() | out-null
     Return $objForm.FileName
 }
 
 Function SaveAs {
     $SaveFileDialog = New-Object System.Windows.Forms.SaveFileDialog -Property @{Filter = 'JSON files|*.json'} 
-    $SaveFileDialog.initialDirectory = [System.IO.Directory]::GetCurrentDirectory()   
     $SaveFileDialog.title = "Save File to Disk"   
+    $SaveFileDialog.ShowHelp = $True
+    $SaveFileDialog.OverwritePrompt = $True
+    $SaveFileDialog.CreatePrompt = $True
     $SaveFileDialog.ShowDialog() | out-null
     Return $SaveFileDialog.FileName
 }
