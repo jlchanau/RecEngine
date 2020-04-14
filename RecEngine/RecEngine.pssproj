@@ -47,6 +47,8 @@
   <ItemGroup>
     <Content Include="RecEngine.exe" />
     <Content Include="Resources.resx" />
+    <Content Include="SQL CLR Hashing function\GetHashHybrid.function.sql" />
+    <Content Include="SQL CLR Hashing function\HashUtil.cs" />
     <Content Include="SQL Tables\RecDetailsMismatches.sql" />
     <Content Include="SQL Tables\RecDetailsNotExist.sql" />
     <Content Include="SQL Tables\RecSummary.sql" />
@@ -61,6 +63,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="SQL CLR Hashing function\" />
     <Folder Include="SQL Tables\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
