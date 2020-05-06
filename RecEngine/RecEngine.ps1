@@ -250,7 +250,7 @@ IF($validSettings -eq 0){
     IF($SQL_targetQueryPathExists -eq "false" -and $errorMessage.length -gt 0) {
         $errorMessage = "$errorMessage`n`nINVALID REC QUERY PATH: $SQL_targetQueryPath does not exist."   
     }
-    ELSEIF($invalidTableNameRec.length -gt 0 -and $errorMessage.length -eq 0) {
+    ELSEIF($SQL_targetQueryPathExists -eq "false" -and $errorMessage.length -eq 0) {
         $errorMessage = "INVALID REC QUERY PATH: $SQL_targetQueryPath does not exist."   
     }
     IF($invalidTableNameTarget.length -gt 0) {
